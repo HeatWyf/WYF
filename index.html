@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>盖章卡 · Reward Stamp Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <p class="brand">StampJoy</p>
+    <h1>盖章奖励卡</h1>
+    <p class="lede">选一张主题卡，点圆圈盖章，填好名字和奖品，打印出来贴在冰箱上。</p>
+    <div class="header-actions">
+      <button type="button" class="btn btn-primary" id="printBtn">打印卡片</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">清空印章</button>
+    </div>
+  </header>
+
+  <nav class="theme-nav" aria-label="主题切换">
+    <button type="button" class="theme-chip is-active" data-theme="fire">消防员</button>
+    <button type="button" class="theme-chip" data-theme="soccer">足球</button>
+    <button type="button" class="theme-chip" data-theme="space">太空</button>
+    <button type="button" class="theme-chip" data-theme="unicorn">独角兽</button>
+    <button type="button" class="theme-chip" data-theme="fox">小狐狸</button>
+  </nav>
+
+  <main class="gallery" id="gallery">
+    <!-- Firefighter -->
+    <article class="stamp-card theme-fire is-visible" data-theme="fire" aria-label="消防员盖章卡">
+      <div class="card-inner">
+        <header class="card-top">
+          <div class="name-field">
+            <span>NAME</span>
+            <input type="text" placeholder="________" maxlength="16" aria-label="名字" />
+          </div>
+          <h2 class="card-title">REWARD CHART</h2>
+        </header>
+
+        <div class="illus-row top-illus" aria-hidden="true">
+          <svg class="fire-truck" viewBox="0 0 160 70" fill="none">
+            <rect x="28" y="28" width="110" height="28" rx="4" fill="#E6392B"/>
+            <rect x="8" y="36" width="28" height="20" rx="3" fill="#C62828"/>
+            <rect x="48" y="16" width="36" height="18" rx="3" fill="#90CAF9" stroke="#1565C0" stroke-width="2"/>
+            <rect x="90" y="20" width="22" height="12" rx="2" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+            <rect x="118" y="18" width="10" height="22" fill="#FFC107"/>
+            <circle cx="40" cy="58" r="10" fill="#263238"/>
+            <circle cx="40" cy="58" r="5" fill="#90A4AE"/>
+            <circle cx="118" cy="58" r="10" fill="#263238"/>
+            <circle cx="118" cy="58" r="5" fill="#90A4AE"/>
+            <rect x="8" y="32" width="8" height="6" fill="#FFC107"/>
+            <path d="M132 22h18l-4 14h-14z" fill="#E6392B"/>
+          </svg>
+          <svg class="cloud" viewBox="0 0 60 30"><ellipse cx="22" cy="18" rx="16" ry="10" fill="#fff"/><ellipse cx="38" cy="16" rx="14" ry="10" fill="#fff"/><ellipse cx="30" cy="12" rx="12" ry="9" fill="#fff"/></svg>
+        </div>
+
+        <div class="stamp-board" data-stamps="25"></div>
+
+        <footer class="card-bottom">
+          <div class="prize-field">
+            <span>PRIZE</span>
+            <input type="text" placeholder="想要的奖品…" maxlength="24" aria-label="奖品" />
+          </div>
+          <div class="finish-badge" aria-hidden="true">
+            <svg class="dalmatian" viewBox="0 0 90 80" fill="none">
+              <ellipse cx="48" cy="52" rx="28" ry="22" fill="#fff" stroke="#333" stroke-width="1.5"/>
+              <circle cx="58" cy="28" r="18" fill="#fff" stroke="#333" stroke-width="1.5"/>
+              <ellipse cx="72" cy="22" rx="6" ry="9" fill="#fff" stroke="#333" stroke-width="1.2"/>
+              <ellipse cx="44" cy="22" rx="6" ry="9" fill="#fff" stroke="#333" stroke-width="1.2"/>
+              <circle cx="54" cy="26" r="2.2" fill="#222"/>
+              <circle cx="64" cy="26" r="2.2" fill="#222"/>
+              <ellipse cx="59" cy="32" rx="3" ry="2" fill="#333"/>
+              <path d="M56 36q3 3 6 0" stroke="#333" stroke-width="1.2" fill="none"/>
+              <circle cx="36" cy="48" r="4" fill="#222"/><circle cx="58" cy="58" r="5" fill="#222"/><circle cx="68" cy="46" r="3.5" fill="#222"/>
+              <path d="M30 18c-2-10 8-14 12-6" stroke="#E6392B" stroke-width="3" fill="none"/>
+              <path d="M30 12h14v6c0 4-3 7-7 7s-7-3-7-7z" fill="#E6392B"/>
+              <text x="8" y="78" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#E6392B">YOU DID IT!</text>
+            </svg>
+          </div>
+        </footer>
+
+        <div class="decor flames" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Soccer -->
+    <article class="stamp-card theme-soccer" data-theme="soccer" aria-label="足球盖章卡">
+      <div class="card-inner">
+        <header class="card-top">
+          <div class="name-field">
+            <span>NAME</span>
+            <input type="text" placeholder="________" maxlength="16" aria-label="名字" />
+          </div>
+          <h2 class="card-title">REWARD CHART</h2>
+        </header>
+
+        <div class="illus-row top-illus" aria-hidden="true">
+          <svg class="soccer-kid" viewBox="0 0 100 80" fill="none">
+            <circle cx="52" cy="16" r="10" fill="#FFCC80"/>
+            <path d="M42 26h20l4 22H38z" fill="#E53935"/>
+            <path d="M40 48l-8 18M60 48l10 16" stroke="#1565C0" stroke-width="5" stroke-linecap="round"/>
+            <path d="M48 26l-14 10M56 28l16 8" stroke="#FFCC80" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="78" cy="58" r="12" fill="#fff" stroke="#222" stroke-width="1.5"/>
+            <path d="M78 46l4 8-4 4-6-2zm-8 8l6 2 2 8-6 2zm16 0l-6 2-2 8 6 2z" fill="#222"/>
+            <path d="M32 66h14l2 6H30z" fill="#FF6F00"/>
+            <path d="M68 64h14l-2 6H66z" fill="#FF6F00"/>
+          </svg>
+          <svg class="trophy" viewBox="0 0 48 56" fill="none">
+            <path d="M14 8h20v14c0 8-4 12-10 12s-10-4-10-12V8z" fill="#FFC107" stroke="#F57F17" stroke-width="1.5"/>
+            <path d="M14 12H8c0 8 4 10 8 10M34 12h6c0 8-4 10-8 10" stroke="#FFC107" stroke-width="3" fill="none"/>
+            <rect x="20" y="34" width="8" height="6" fill="#FFB300"/>
+            <rect x="14" y="40" width="20" height="6" rx="1" fill="#FFB300"/>
+          </svg>
+        </div>
+
+        <div class="stamp-board" data-stamps="25"></div>
+
+        <footer class="card-bottom">
+          <div class="prize-field">
+            <span>PRIZE</span>
+            <input type="text" placeholder="想要的奖品…" maxlength="24" aria-label="奖品" />
+          </div>
+          <div class="finish-badge cleats" aria-hidden="true">
+            <svg viewBox="0 0 70 50" fill="none">
+              <path d="M8 28c8-10 28-12 40-4l10 6c2 2 2 6-2 8H18c-6 0-12-4-10-10z" fill="#E53935"/>
+              <circle cx="22" cy="38" r="2" fill="#333"/><circle cx="30" cy="40" r="2" fill="#333"/><circle cx="38" cy="40" r="2" fill="#333"/>
+              <text x="4" y="14" font-family="Nunito,sans-serif" font-size="10" font-weight="800" fill="#FFF59D">GOAL!</text>
+            </svg>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Space -->
+    <article class="stamp-card theme-space" data-theme="space" aria-label="太空盖章卡">
+      <div class="card-inner">
+        <header class="card-top">
+          <div class="name-field">
+            <span>NAME</span>
+            <input type="text" placeholder="________" maxlength="16" aria-label="名字" />
+          </div>
+          <h2 class="card-title">REWARD CHART</h2>
+        </header>
+
+        <div class="illus-row top-illus space-illus" aria-hidden="true">
+          <svg class="planet-earth" viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="18" fill="#42A5F5"/>
+            <ellipse cx="16" cy="18" rx="8" ry="5" fill="#66BB6A" transform="rotate(-20 16 18)"/>
+            <ellipse cx="28" cy="28" rx="7" ry="4" fill="#66BB6A"/>
+            <path d="M8 24c6-2 10 2 14 0s8-4 14-2" stroke="#81D4FA" stroke-width="2" fill="none"/>
+          </svg>
+          <svg class="sun" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="12" fill="#FFEB3B"/>
+            <g stroke="#FFEB3B" stroke-width="3" stroke-linecap="round">
+              <path d="M20 2v4M20 34v4M2 20h4M34 20h4M7 7l3 3M30 30l3 3M7 33l3-3M30 10l3-3"/>
+            </g>
+          </svg>
+          <svg class="saturn" viewBox="0 0 70 50">
+            <ellipse cx="35" cy="26" rx="28" ry="6" fill="none" stroke="#FFD54F" stroke-width="3"/>
+            <circle cx="35" cy="26" r="14" fill="#FFA726"/>
+            <ellipse cx="32" cy="22" rx="6" ry="3" fill="#FFCC80"/>
+          </svg>
+        </div>
+
+        <div class="stamp-board" data-stamps="25"></div>
+
+        <footer class="card-bottom">
+          <div class="prize-field">
+            <span>PRIZE</span>
+            <input type="text" placeholder="想要的奖品…" maxlength="24" aria-label="奖品" />
+          </div>
+          <div class="finish-badge" aria-hidden="true">
+            <svg class="rocket-svg" viewBox="0 0 40 56" fill="none">
+              <path d="M20 4c8 10 10 22 8 34H12C10 26 12 14 20 4z" fill="#EF5350"/>
+              <circle cx="20" cy="22" r="5" fill="#81D4FA" stroke="#1565C0" stroke-width="1.5"/>
+              <path d="M12 30l-8 8 8-2M28 30l8 8-8-2" fill="#FFA726"/>
+              <path d="M14 42l6 10 6-10" fill="#FFEB3B"/>
+            </svg>
+            <span class="finish-text">BLAST OFF!</span>
+          </div>
+        </footer>
+        <div class="stars" aria-hidden="true"></div>
+      </div>
+    </article>
+
+    <!-- Unicorn -->
+    <article class="stamp-card theme-unicorn" data-theme="unicorn" aria-label="独角兽盖章卡">
+      <div class="card-inner">
+        <header class="card-top">
+          <div class="name-field">
+            <span>NAME</span>
+            <input type="text" placeholder="________" maxlength="16" aria-label="名字" />
+          </div>
+          <h2 class="card-title">REWARD CHART</h2>
+        </header>
+
+        <div class="illus-row top-illus" aria-hidden="true">
+          <svg class="unicorn" viewBox="0 0 120 90" fill="none">
+            <path d="M70 70c-18 0-34-8-40-22 8-2 14-8 16-16 6 4 14 6 24 4 4 10 12 18 28 20-4 8-14 14-28 14z" fill="#FAFAFA" stroke="#B39DDB" stroke-width="1.5"/>
+            <path d="M48 36c-2-14 8-22 14-10" stroke="#CE93D8" stroke-width="6" stroke-linecap="round"/>
+            <path d="M52 28c4-16 16-10 12 2" fill="#F48FB1"/>
+            <path d="M58 18l4-14 4 14z" fill="#FFD54F" stroke="#FFB300" stroke-width="1"/>
+            <circle cx="72" cy="40" r="2.5" fill="#5D4037"/>
+            <path d="M78 46q4 3 8 0" stroke="#EC407A" stroke-width="1.5" fill="none"/>
+            <path d="M40 48c-8 4-14 2-18-4 8 0 12-4 14-8 4 4 8 8 4 12z" fill="#F48FB1"/>
+            <path d="M40 52c-6 6-4 12 2 10" fill="#81D4FA"/>
+            <path d="M38 50c-4 8 0 12 6 8" fill="#FFF59D"/>
+          </svg>
+          <svg class="rainbow" viewBox="0 0 80 40" fill="none">
+            <path d="M4 36a36 36 0 0 1 72 0" stroke="#EF5350" stroke-width="5" fill="none"/>
+            <path d="M10 36a30 30 0 0 1 60 0" stroke="#FFA726" stroke-width="5" fill="none"/>
+            <path d="M16 36a24 24 0 0 1 48 0" stroke="#FFEE58" stroke-width="5" fill="none"/>
+            <path d="M22 36a18 18 0 0 1 36 0" stroke="#66BB6A" stroke-width="5" fill="none"/>
+            <path d="M28 36a12 12 0 0 1 24 0" stroke="#42A5F5" stroke-width="5" fill="none"/>
+          </svg>
+        </div>
+
+        <div class="stamp-board" data-stamps="25"></div>
+
+        <footer class="card-bottom">
+          <div class="prize-field">
+            <span>PRIZE</span>
+            <input type="text" placeholder="想要的奖品…" maxlength="24" aria-label="奖品" />
+          </div>
+          <div class="finish-badge" aria-hidden="true">
+            <span class="hearts">♥ ★ ♥</span>
+            <span class="finish-text soft">MAGIC!</span>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Fox / School -->
+    <article class="stamp-card theme-fox" data-theme="fox" aria-label="小狐狸盖章卡">
+      <div class="card-inner">
+        <header class="card-top">
+          <div class="name-field">
+            <span>NAME</span>
+            <input type="text" placeholder="________" maxlength="16" aria-label="名字" />
+          </div>
+          <h2 class="card-title">REWARD CHART</h2>
+        </header>
+
+        <div class="illus-row top-illus" aria-hidden="true">
+          <svg class="fox" viewBox="0 0 90 80" fill="none">
+            <path d="M20 30L8 8l22 14zm50 0l12-22-22 14z" fill="#EF6C00"/>
+            <ellipse cx="45" cy="48" rx="28" ry="24" fill="#FF9800"/>
+            <ellipse cx="45" cy="58" rx="14" ry="12" fill="#FFF3E0"/>
+            <circle cx="34" cy="44" r="4" fill="#3E2723"/>
+            <circle cx="56" cy="44" r="4" fill="#3E2723"/>
+            <ellipse cx="45" cy="52" rx="5" ry="3.5" fill="#3E2723"/>
+            <path d="M40 58q5 5 10 0" stroke="#E65100" stroke-width="1.5" fill="none"/>
+            <path d="M30 62h30v10c0 4-6 8-15 8s-15-4-15-8z" fill="#43A047"/>
+          </svg>
+          <svg class="school-bus" viewBox="0 0 110 55" fill="none">
+            <rect x="8" y="14" width="86" height="28" rx="4" fill="#F9A825"/>
+            <rect x="14" y="18" width="14" height="12" rx="1" fill="#81D4FA"/>
+            <rect x="32" y="18" width="14" height="12" rx="1" fill="#81D4FA"/>
+            <rect x="50" y="18" width="14" height="12" rx="1" fill="#81D4FA"/>
+            <rect x="72" y="18" width="16" height="18" rx="2" fill="#FBC02D"/>
+            <rect x="4" y="28" width="10" height="14" fill="#F9A825"/>
+            <circle cx="28" cy="44" r="7" fill="#37474F"/><circle cx="28" cy="44" r="3" fill="#90A4AE"/>
+            <circle cx="78" cy="44" r="7" fill="#37474F"/><circle cx="78" cy="44" r="3" fill="#90A4AE"/>
+            <rect x="88" y="30" width="6" height="6" fill="#FFEB3B"/>
+          </svg>
+        </div>
+
+        <div class="stamp-board" data-stamps="25"></div>
+
+        <footer class="card-bottom">
+          <div class="prize-field">
+            <span>PRIZE</span>
+            <input type="text" placeholder="想要的奖品…" maxlength="24" aria-label="奖品" />
+          </div>
+          <div class="finish-badge apples" aria-hidden="true">
+            <svg viewBox="0 0 60 50" fill="none">
+              <circle cx="22" cy="28" r="14" fill="#E53935"/>
+              <circle cx="42" cy="30" r="12" fill="#C62828"/>
+              <path d="M22 14c0-6 6-8 8-2M40 18c2-6 8-4 6 2" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="28" cy="12" rx="6" ry="3" fill="#66BB6A" transform="rotate(-20 28 12)"/>
+            </svg>
+            <span class="finish-text soft">A+</span>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <section class="how-to">
+    <h2>怎么用</h2>
+    <ol>
+      <li>点选上方主题，或直接滚动查看全部卡片。</li>
+      <li>在圆圈上点击盖章（再点一次可取消）。</li>
+      <li>填写名字与奖品，点「打印卡片」输出当前主题。</li>
+    </ol>
+  </section>
+
+  <footer class="site-footer">
+    <p>StampJoy · 儿童奖励盖章卡模板 · 可打印</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
