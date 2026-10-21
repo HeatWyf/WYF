@@ -21,3 +21,11 @@ python3 -m http.server 8080
 - 小狐狸（上学）
 
 每张卡为 5×5 共 25 个印章位，含 NAME / PRIZE 填写区与主题插画。
+
+## 加减法练习单（新编）
+
+基于「加法和减法 2」原卷结构重写的一年级练习单，题面全部换新：
+
+- 可打印页面：[`worksheets/addition-subtraction-2-redesign.html`](worksheets/addition-subtraction-2-redesign.html)
+- 含看图写算式、数轴求差、口算、选数组式、不等式极值、两步应用题
+- 页面内可切换显示参考答案，并支持打印
