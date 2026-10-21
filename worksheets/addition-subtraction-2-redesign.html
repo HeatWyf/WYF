@@ -326,21 +326,16 @@
 
     .ineq-item {
       font-family: "Noto Serif SC", serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       background: var(--panel);
       border: 1.5px solid #cfe0d8;
       border-radius: 8px;
-      padding: 0.4rem 0.35rem;
+      padding: 0.42rem 0.3rem;
       text-align: center;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 0.2rem;
-    }
-
-    .ineq-item .cue {
-      width: 100%;
-      height: 28px;
+      justify-content: center;
+      min-height: 2.35rem;
     }
 
     .word-panel {
@@ -728,26 +723,31 @@
           </p>
           <div class="ineq-grid">
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <rect x="8" y="10" width="28" height="12" rx="2" fill="#c8e8f0"/>
-                <text x="48" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">+3 &gt; 5</text>
-              </svg>
               <span><span class="box"></span> + 3 &gt; 5</span>
             </div>
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <rect x="8" y="10" width="28" height="12" rx="2" fill="#fde0c8"/>
-                <text x="48" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">−2 &gt; 3</text>
-              </svg>
               <span><span class="box"></span> − 2 &gt; 3</span>
             </div>
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <text x="18" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">8 −</text>
-                <rect x="48" y="10" width="20" height="12" rx="2" fill="#cfeadb"/>
-                <text x="74" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">&lt; 3</text>
-              </svg>
               <span>8 − <span class="box"></span> &lt; 3</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> + 1 &gt; 4</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> − 5 &gt; 1</span>
+            </div>
+            <div class="ineq-item">
+              <span>7 − <span class="box"></span> &lt; 2</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> + 4 &gt; 6</span>
+            </div>
+            <div class="ineq-item">
+              <span>5 − <span class="box"></span> &lt; 1</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> − 3 &gt; 4</span>
             </div>
           </div>
         </div>
@@ -758,26 +758,31 @@
           </p>
           <div class="ineq-grid">
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <rect x="8" y="10" width="28" height="12" rx="2" fill="#c8e8f0"/>
-                <text x="48" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">−1 &lt; 6</text>
-              </svg>
               <span><span class="box"></span> − 1 &lt; 6</span>
             </div>
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <text x="18" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">9 −</text>
-                <rect x="48" y="10" width="20" height="12" rx="2" fill="#fde0c8"/>
-                <text x="74" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">&gt; 5</text>
-              </svg>
               <span>9 − <span class="box"></span> &gt; 5</span>
             </div>
             <div class="ineq-item">
-              <svg class="cue" viewBox="0 0 120 28" aria-hidden="true">
-                <rect x="8" y="10" width="28" height="12" rx="2" fill="#cfeadb"/>
-                <text x="48" y="20" font-size="11" fill="#16332c" font-family="Noto Serif SC, serif">+4 &lt; 8</text>
-              </svg>
               <span><span class="box"></span> + 4 &lt; 8</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> − 2 &lt; 4</span>
+            </div>
+            <div class="ineq-item">
+              <span>6 − <span class="box"></span> &gt; 1</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> + 2 &lt; 7</span>
+            </div>
+            <div class="ineq-item">
+              <span>8 − <span class="box"></span> &gt; 3</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> − 4 &lt; 3</span>
+            </div>
+            <div class="ineq-item">
+              <span><span class="box"></span> + 5 &lt; 9</span>
             </div>
           </div>
         </div>
@@ -865,8 +870,8 @@
       </li>
       <li>
         <strong>不等式</strong><br />
-        （1）最小：3；6；6<br />
-        （2）最大：6；3；3
+        （1）最小：3；6；6；4；7；6；3；5；8<br />
+        （2）最大：6；3；3；5；4；4；4；6；3
       </li>
       <li>
         <strong>应用题</strong>：9−2−3=4，还剩 4 本
